@@ -1,9 +1,11 @@
-from typing import Callable
+import sys
+from typing import TYPE_CHECKING, Callable
 from functools import wraps
 from pathlib import Path
 import logging
 
-from discord.ext import commands
+if TYPE_CHECKING:
+    from discord.ext import commands
 
 
 _CEND = "\33[0m"
@@ -36,7 +38,7 @@ def _make_logger(enabled: bool) -> logging.Logger:
     logger.setLevel(logging.INFO)
 
     if not any(isinstance(h, logging.StreamHandler) for h in logger.handlers):
-        handler = logging.StreamHandler()
+        handler = logging.StreamHandler(sys.stdout)
         handler.setFormatter(logging.Formatter("[%(name)s] %(message)s"))
         logger.addHandler(handler)
 
@@ -114,7 +116,7 @@ def load(*, path: str = "cogs", use_logger: bool = True, color: bool = True):
     path
         The relative path of the directory where cog files reside.
     use_logger
-        Whether to use the built-in logger.
+        Whether to use the built-in logger (stdout).
     color
         Whether the built-in logger should use ANSI colors.
     """
