@@ -1,8 +1,7 @@
 `cogload` is a utility plugin for `discord.py`.  
 It basically allows you to dynamically pre-load all cog files within a folder with near-zero overhead.
 
-### [PyPI](https://pypi.org/project/cogload)
-
+### View on [PyPI](https://pypi.org/project/cogload)
 
 ## Install Latest Release (`pip`)
 

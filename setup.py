@@ -21,7 +21,14 @@ setuptools.setup(
     include_package_data=True,
     # requirements and search
     python_requires=">=3.8",
-    install_requires=["httpx", "asyncio"],
+    install_requires=[],
     classifiers=[],
-    keywords=["discord.py", "discord bot", "cogs", "discord cogs", "discord.py cogs", "dpy cogs"],
+    keywords=[
+        "discord.py",
+        "discord bot",
+        "cogs",
+        "discord cogs",
+        "discord.py cogs",
+        "dpy cogs",
+    ],
 )
