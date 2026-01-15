@@ -21,7 +21,7 @@ setuptools.setup(
     include_package_data=True,
     # requirements and search
     python_requires=">=3.8",
-    install_requires=[],
+    install_requires=["discord.py"],
     classifiers=[],
     keywords=[
         "discord.py",

@@ -1,11 +1,10 @@
-import sys
-from typing import TYPE_CHECKING, Callable
+from typing import Callable
 from functools import wraps
 from pathlib import Path
 import logging
+import sys
 
-if TYPE_CHECKING:
-    from discord.ext import commands
+from discord.ext import commands
 
 
 _CEND = "\33[0m"
